@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Noise Monitor</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+<!-- LOGIN SCREEN -->
+<div id="login">
+  <h1>🔐 LOGIN</h1>
+  <input id="user" placeholder="Username">
+  <input id="pass" type="password" placeholder="Password">
+  <button onclick="login()">ENTER</button>
+</div>
+
+<!-- DASHBOARD -->
+<div id="dashboard" hidden>
+  <h1>🔊 NOISE MONITOR</h1>
+
+  <div class="db-display">
+    <span id="db">0</span> dB
+  </div>
+
+  <!-- Animated Bar -->
+  <div class="bar-container">
+    <div id="bar"></div>
+  </div>
+
+  <!-- Threshold -->
+  <input type="range" min="10" max="100" value="60" id="slider">
+  <p>Threshold: <span id="th">60</span> dB</p>
+
+  <!-- Graph -->
+  <canvas id="chart"></canvas>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

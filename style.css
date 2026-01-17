@@ -1,0 +1,69 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background: radial-gradient(circle at top, #020024, #090979, #00d4ff);
+  color: white;
+  margin: 0;
+  text-align: center;
+}
+
+/* LOGIN */
+#login {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 15px;
+}
+
+#login input, button {
+  padding: 12px;
+  width: 70%;
+  margin: auto;
+  border-radius: 8px;
+  border: none;
+}
+
+button {
+  background: cyan;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* DASHBOARD */
+.db-display {
+  font-size: 4rem;
+  margin: 20px;
+  text-shadow: 0 0 20px cyan;
+}
+
+/* BAR */
+.bar-container {
+  width: 80%;
+  height: 30px;
+  background: #111;
+  border-radius: 20px;
+  margin: auto;
+  overflow: hidden;
+}
+
+#bar {
+  height: 100%;
+  width: 0%;
+  background: lime;
+  box-shadow: 0 0 20px lime;
+  transition: width 0.2s, background 0.2s;
+}
+
+/* SLIDER */
+input[type=range] {
+  width: 80%;
+}
+
+/* MOBILE */
+@media(max-width:600px) {
+  .db-display { font-size: 3rem; }
+}
